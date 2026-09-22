@@ -30,13 +30,15 @@ jobs:
           mkdir -p /tmp/v54 /tmp/unpacked app/src/main/assets
           gh release download v54 --pattern "MASTER_PROJECT_V54_USB_PORTABLE_COMPLETE.zip" --dir /tmp/v54
           unzip -q /tmp/v54/MASTER_PROJECT_V54_USB_PORTABLE_COMPLETE.zip -d /tmp/unpacked
-          INDEX=$(find /tmp/unpacked -type f -name "MASTER_PROJECT_V54_DRAW_AFTER_ZOOM_FIX.html" | head -n 1)
-          if [ -z "$INDEX" ]; then
-            echo "ERROR: index.html not found"
+          HTML=$(find /tmp/unpacked -type f -name "MASTER_PROJECT_V54_DRAW_AFTER_ZOOM_FIX.html" | head -n 1)
+          if [ -z "$HTML" ]; then
+            echo "ERROR: MASTER_PROJECT_V54_DRAW_AFTER_ZOOM_FIX.html not found"
             exit 1
           fi
-          ROOT=$(dirname "$INDEX")
+          ROOT=$(dirname "$HTML")
           cp -a "$ROOT"/. app/src/main/assets/
+          cp "$HTML" app/src/main/assets/index.html
+          echo "V54 prepared successfully"
 
       - name: Build APK
         run: gradle assembleDebug
