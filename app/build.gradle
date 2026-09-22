@@ -1,0 +1,19 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.mohamadabuarra.englishinteractivebook'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.mohamadabuarra.englishinteractivebook"
+        minSdk 23
+        targetSdk 35
+        versionCode 54
+        versionName "54.0"
+    }
+}
+
+dependencies {
+}
