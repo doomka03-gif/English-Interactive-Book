@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.mohamadabuarra.englishinteractivebook'
+    namespace 'com.englishinteractivebook'
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.mohamadabuarra.englishinteractivebook"
+applicationId "com.englishinteractivebook" 
         minSdk 23
         targetSdk 35
         versionCode 54
