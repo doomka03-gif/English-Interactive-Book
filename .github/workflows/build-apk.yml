@@ -30,7 +30,7 @@ jobs:
           mkdir -p /tmp/v54 /tmp/unpacked app/src/main/assets
           gh release download v54 --pattern "MASTER_PROJECT_V54_USB_PORTABLE_COMPLETE.zip" --dir /tmp/v54
           unzip -q /tmp/v54/MASTER_PROJECT_V54_USB_PORTABLE_COMPLETE.zip -d /tmp/unpacked
-          INDEX=$(find /tmp/unpacked -type f -name "index.html" | head -n 1)
+          INDEX=$(find /tmp/unpacked -type f -name "MASTER_PROJECT_V54_DRAW_AFTER_ZOOM_FIX.html" | head -n 1)
           if [ -z "$INDEX" ]; then
             echo "ERROR: index.html not found"
             exit 1
