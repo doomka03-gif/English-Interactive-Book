@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
 
         webView.setWebViewClient(new WebViewClient());
 
-        webView.loadUrl("file:///android_asset/index.html");
+        webView.loadUrl("file:///android_asset/MASTER_PROJECT_V54_DRAW_AFTER_ZOOM_FIX.html");;
     }
 
     @Override
